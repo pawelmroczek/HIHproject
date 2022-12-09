@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+
+#svg{
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+
+p::first-letter{
+  font-size: 35px;
+}
+

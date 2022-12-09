@@ -1,0 +1,71 @@
+.snowboarders__header {
+  background-color: rgba(0, 0, 0, 0.729);
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 200;
+}
+
+.snowboarders {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/2-snowboarders.jpg);
+  background-position: center;
+  background-size: cover;
+  gap: 30px;
+}
+
+.snowboarders__snowboarders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.snowboarders__text {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.836);
+}
+
+.snowboarders__achievments {
+  padding-left: 20px;
+}
+
+.snowboarders__snowboarder {
+  color: white;
+  width: 40%;
+  padding-bottom: 0px;
+}
+
+.snowboarders__photo {
+  margin-bottom: -5px;
+  width: 100%;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+.snowboarders__numbers {
+  font-size: 40px;
+}
+
+.snowboarders__snowboarderHeader {
+  font-size: 25px;
+  text-align: center;
+}
+
+.snowboarders__list {
+  list-style: none;
+}
+
+@media (max-width: 760px) {
+  .snowboarders__snowboarder {
+    width: 80%;
+  }
+}

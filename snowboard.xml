@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE snowboard SYSTEM "snowboard.dtd">
+<snowboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="snowboard.xsd">
+    <creators>
+        <creator alive="no">
+            <name>Sherman</name>
+            <surname>Poppen</surname>
+            <birth>1930</birth>
+            <death>2019</death>
+            <invention inventionDate="1963" production="no">snurfer </invention>
+            <about>
+                To on w 1963 roku miał połączyć ze sobą dwie narty, tworząc w ten sposób zabawkę dla swojego dziecka. Sprzęt, który nazwano snurferem, uznawany jest za prototyp współczesnej deski. Na tym jednak nie koniec, bo Proppen miał ponoć udoskonalać swoje dzieło. Dążąc do poprawy sterowności, w przedniej części wywiercił dziurę i przełożył przez nią sznurek, który podczas jazdy trzymało się w dłoni.
+            </about>
+            <image source="images/ShermanPoppen.jpeg">Sherman Poppen</image>
+            <link source="https://en.wikipedia.org/wiki/Snurfer">Snurfer</link>
+        </creator>
+        <creator alive="yes">
+            <name>Dimitrij</name>
+            <surname>Milovich</surname>
+            <invention inventionDate="1975" production="yes">Winterstick </invention>
+            <about>
+                Pierwszy zakład produkujący deski miał założyć Dimitrij Milovich, którzy przygodę ze snowboardem zaczynał od jazdy na metalowych tackach. Było to w 1975 roku w Utah. Deski Dimitrija wykonane były z tworzywa sztucznego i pokryte włóknem szklanym zwiększającym poślizg. Produkowano je pod nazwą Winterstick. Oczywiście droga do współczesnej deski była jeszcze daleka.
+            </about>
+            <image source="images/DimirijeMlovich">Dimitrij Milovich</image>
+            <link source="https://www.winterstick.com/">Winterstick</link>
+        </creator>
+        <creator alive="no">
+            <name>Jake</name>
+            <surname>Burton</surname>
+            <birth>1954</birth>
+            <death>2019</death>
+            <invention inventionDate="1977" production="yes">Burton Boards</invention>
+            <about>
+                Dzieło Proppena miał udoskonalić wielki fan jego snurferów, Jake Burton. Innowacja polegała na doczepieniu do jednośladu tasiemek na buty, co znacznie poprawiało wygodę i bezpieczeństwo podczas jazdy. Dziewięć lat później (w 1977 roku) Jake założył Burton Boards, w którym zaczął produkować deski z wiązaniami.
+            </about>
+            <image source="images/JakeBurton.png">Jake Burton</image>
+            <link source="https://www.burton.com/pl/en/home?regionSelector=true">Burton</link>
+        </creator>
+    </creators>
+    <styles>
+        <style>
+            <name>Freestyle</name>
+            <description>
+                Celem zawodnika jest wykonanie jak najtrudniejszych i jak najefektowniejszych tricków.
+            </description>
+        </style>
+        <style>
+            <name>Styl alpejski</name>
+            <description>
+                Ma charakter wyścigu, polega na jak najszybszym zjeździe po wyznaczonej trasie.
+            </description>
+        </style>
+        <style>
+            <name>Freeride</name>
+            <description>
+               W tym przypadku największą przyjemność czerpie się z jazdy poza wytyczonymi trasami.
+            </description>
+        </style>
+        <style>
+            <name>Snowcross</name>
+            <description>
+               Łączy zjazd na czas z pokonywaniem przeszkód.
+            </description>
+        </style>
+    </styles>
+    <snowboarders>
+        <snowboarder alive="yes">
+            <name>Max</name>
+            <surname>Parrot</surname>
+            <birth>1994</birth>
+            <age>28</age>
+            <height>180</height>
+            <nationality>Kanada</nationality>
+            <tournaments>
+                <tournament n="1" type="slopestyle">
+                    <place>1</place>
+                    <city>PEKIN</city>
+                    <date>2022</date>
+                </tournament>
+                <tournament n="2" type="slopestyle">
+                    <place>2</place>
+                    <city>PJONGCZANG</city>
+                    <date>2018</date>
+                </tournament>
+                <tournament n="3" type="slopestyle">
+                    <place>5</place>
+                    <city>SOCZI</city>
+                    <date>2014</date>
+                </tournament>
+            </tournaments>
+            <image source="images/max parrot.jpeg">Max Parrot</image>
+        </snowboarder>
+        <snowboarder alive="yes">
+            <name>Su</name>
+            <surname>Yiming</surname>
+            <birth>2004</birth>
+            <age>18</age>
+            <height>170</height>
+            <nationality>Chiny</nationality>
+            <tournaments>
+                <tournament n="1" type="slopestyle">
+                    <place>Drugie miejsce</place>
+                    <city>PEKIN</city>
+                    <date>2022</date>
+                </tournament>
+            </tournaments>
+            <image source="images/suYiming.jpeg">Max Parrot</image>
+        </snowboarder>
+       <snowboarder alive="yes">
+            <name>Mark</name>
+            <surname>McMorrist</surname>
+            <birth>1993</birth>
+            <age>29</age>
+            <height>178</height>
+            <nationality>Kanada</nationality>
+            <tournaments>
+                <tournament n="1" type="slopestyle">
+                    <place>3</place>
+                    <city>PEKIN</city>
+                    <date>2022</date>
+                </tournament>
+                <tournament n="2" type="slopestyle">
+                    <place>3</place>
+                    <city>PJONGCZANG</city>
+                    <date>2018</date>
+                </tournament>
+                <tournament n="3" type="slopestyle">
+                    <place>3</place>
+                    <city>SOCZI</city>
+                    <date>2014</date>
+                </tournament>
+            </tournaments>
+            <image source="images/mark-mcmorris.jpeg">Max Parrot</image>
+        </snowboarder>
+        <snowboarder alive="yes">
+            <name>Paweł</name>
+            <surname>Mroczek</surname>
+            <birth>2002</birth>
+            <age>29</age>
+            <height>175</height>
+            <nationality>Polska</nationality>
+            <boardsSize>136 153 172</boardsSize>
+        </snowboarder>
+    </snowboarders>
+</snowboard>

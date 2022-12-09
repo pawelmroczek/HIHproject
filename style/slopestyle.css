@@ -1,0 +1,52 @@
+body {
+  background: rgb(7, 85, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(53, 124, 196, 1) 0%,
+    rgba(7, 85, 164, 1) 100%
+  );
+}
+
+.slopestyle__headerBackground {
+  background-image: url(../images/gogle.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.slopestyle__header {
+  background-color: rgba(0, 0, 0, 0.612);
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.slopestyle__container {
+  display: flex;
+  background-image: url(../images/slopestyle\ 2.jpeg);
+  background-size: cover;
+  background-position: top;
+  padding: 50px;
+  justify-content: flex-end;
+}
+
+.slopestyle__text {
+  width: 30%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.875);
+  color: white;
+  padding: 20px;
+}
+
+@media (max-width: 760px) {
+  .slopestyle__text {
+    width: 90%;
+  }
+  .slopestyle__container {
+    justify-content: center;
+    background-position: center;
+  }
+}

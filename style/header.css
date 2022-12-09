@@ -1,0 +1,79 @@
+header {
+  height: 450px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+}
+
+.header2{
+  justify-content: space-between;
+}
+
+.header__background{
+    background-image: url(../images/severin-van-der-meer-nendaz-matt-georges-whitelines-snowboard_wallpaper_1920x1080-f.jpg);
+    background-size: cover;
+    background-position: top;
+    animation: animacjatła1 5s ease-in-out infinite 0s alternate;
+}
+
+.header__background2{
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+.header__header--thin{
+    font-weight: 200;
+}
+
+
+.header__header{
+    font-size: 100px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .header__background {
+    background-position: center;
+    animation: none;
+  }
+
+  .header__background2{
+    padding-bottom: 200px;
+  }
+
+  .header2{
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+
+  header{
+    height: 300px;
+    justify-content: center;
+  }
+
+
+  .header__header{
+    font-size: 50px;
+}
+}
+
+
+@keyframes animacjatła1{
+  0%{
+   background-size: 100%;
+  }
+  100%{
+    background-size: 140%;
+  }
+}

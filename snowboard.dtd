@@ -1,0 +1,39 @@
+<!ENTITY % source 'source CDATA #REQUIRED'>
+<!ENTITY % nr 'n CDATA #REQUIRED'>
+
+<!ELEMENT snowboard (creators,styles,snowboarders)>
+<!ELEMENT creators (creator+)>
+<!ELEMENT creator (name, surname, birth?, death?, invention, about, image, link)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT birth (#PCDATA)>
+<!ELEMENT death (#PCDATA)>
+<!ELEMENT invention (#PCDATA)>
+<!ELEMENT about (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT styles (style+)>
+<!ELEMENT style (name,description)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT snowboarders (snowboarder+)>
+<!ELEMENT snowboarder (name,surname,birth,age,height,nationality,(tournaments|boardsSize),image?)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT nationality (#PCDATA)>
+<!ELEMENT boardsSize (#PCDATA)>
+<!ELEMENT tournaments (tournament+)>
+<!ELEMENT tournament (place,city,date)>
+<!ELEMENT place (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
+<!ATTLIST snowboard xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST snowboard xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+<!ATTLIST creator alive (yes|no) #REQUIRED>
+<!ATTLIST snowboarder alive (yes|no) #REQUIRED>
+<!ATTLIST invention inventionDate CDATA #IMPLIED>
+<!ATTLIST invention production (yes|no) "yes">
+<!ATTLIST image %source;>
+<!ATTLIST link %source;>
+<!ATTLIST tournament %nr;>
+<!ATTLIST tournament type CDATA #FIXED "slopestyle">

@@ -1,0 +1,100 @@
+.howToStart {
+    color: white;
+    /* background-color: white; */
+    
+    text-align: center;
+  }
+
+  .howToStart__link{
+    color: orange;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .howToStart__link:visited{
+    color:rgb(241, 197, 116)
+  }
+  
+  .howToStart__list{
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .howToStart__container{
+      display: flex;
+      flex-direction: row-reverse;
+  }
+  
+  .howToStart__image{
+      background-image: url(../images/how-to-fall-snowboard.jpg);
+      width: 50%;
+      background-position: center;
+      background-size: cover;
+  }
+  
+  .howToStart__snowBoard{
+      border: 1px solid white;
+      padding: 10px;
+  }
+  
+  h2{
+      font-weight: 200;
+  }
+  
+  .howToStart__articlesContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* background-image: url(/images/2-snowboarders.jpg);
+    background-size: cover; */
+    background-image: url(../images/1920x1080-FullHD.jpg);
+    background-size: cover;
+    background-color: white;
+    width: 50%;
+  }
+  
+  .howToStart__article {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.818);
+    padding: 10px;
+    border-bottom: solid white 1px;
+    flex-grow: 1;
+  }
+  
+  
+  .howToStart__articleHeader {
+    font-weight: 200;
+    font-size: 25px;
+  }
+  
+  p {
+    padding: 5px;
+    line-height: 1.7;
+    font-weight: 200;
+  }
+  
+  .howToStart__snowBoard--thick{
+      font-weight: 400;
+  }
+  
+  
+  
+  @media (max-width: 760px){
+      .showToStart__header{
+          font-size: 25px;
+      }
+  
+      .howToStart__articlesContainer{
+         background-position: center;
+         width: 100%;
+      }
+  
+      .howToStart__container{
+        flex-direction: column;
+      }
+  
+      .howToStart__image{
+        width: 100%;
+        height: 300px;
+      }
+  }

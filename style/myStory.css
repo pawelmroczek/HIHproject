@@ -1,0 +1,88 @@
+body body{
+    background-color: black;
+}
+
+.myStory__galleryLink{
+    width: 50%;
+   
+}
+
+.myStory__photo{
+    width: 90%;
+}
+
+.myStory__galleryLink:hover{
+    cursor: zoom-in;
+}
+
+.myStory__galleryPhoto{
+    width: 100%;
+    border: solid rgba(0, 0, 0, 0.853) 40px;
+    margin-bottom: 10px
+}
+
+.myStory{
+    color: white;
+}
+
+
+.myStory__heading{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.myStory__div{
+    display: flex;
+    background-color: rgb(181, 181, 181);
+    background-image: url(../images/mountain-png-online-marketing-all-solutions-0.png);
+    background-position: right;
+    background-size: cover;
+}
+
+
+
+.myStory__text{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.872);
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px
+
+}
+
+
+.myStory__photos--header{
+    background-color: whitesmoke;
+    padding: 15px;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 30PX;
+}
+
+.myStory__photos{
+    background-color: whitesmoke;
+    background-image: url(../images/816-8163655_mountain-png.png);
+    background-position: bottom;
+    display: flex;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding-bottom: 10px;
+}
+
+
+@media(max-width: 767px){
+    .myStory__div{
+        flex-direction: column;
+    }
+
+    .myStory__text{
+        width: 100%;
+    }
+}

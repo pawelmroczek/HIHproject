@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+    <xs:element name="snowboard" type="snowboardType"/>
+
+    <xs:complexType name="snowboardType">
+        <xs:all>
+            <xs:element name="creators" type="creatorsType"/>
+            <xs:element name="styles">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="style" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="name" type="longStringType"/>
+                                    <xs:element name="description">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:minLength value="15"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>    
+            </xs:element>
+            <xs:element name="snowboarders">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="snowboarder" type="snowboarderType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="snowboarderType">
+        <xs:sequence>
+            <xs:element name="name" type="shortStringType"/>
+            <xs:element name="surname" type="shortStringType"/>
+            <xs:element name="birth" type="xs:gYear" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="age" type="ageType"/>
+            <xs:element name="height">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:maxInclusive value="250"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nationality" type="shortStringType"/>
+            <xs:element name="tournaments" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tournament" type="tournamentType" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="image" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="boardsSize" minOccurs="0">
+                <xs:simpleType>
+                    <xs:restriction base="listType">
+                        <xs:length value="3"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute ref="alive" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tournamentType">
+        <xs:sequence>
+            <xs:element name="place">
+                <xs:simpleType>
+                    <xs:union memberTypes="placeType placeStringType"/>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="date" type="xs:gYear"/>
+        </xs:sequence>
+        <xs:attribute name="n"  type="xs:integer" use="required"/>
+        <xs:attribute name="type">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="slopestyle"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="creatorsType">
+        <xs:sequence>
+            <xs:element name="creator"  minOccurs="0" maxOccurs="unbounded" type="creatorType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="creatorType">
+        <xs:complexContent>
+            <xs:extension base="personType">
+                <xs:sequence>
+                    <xs:group ref="lifespanGroup"/>
+                    <xs:element name="invention" type="inventionType"/>
+                    <xs:element name="about">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:minLength value="15"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element ref="image" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="link" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute ref="alive" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="inventionType">
+        <xs:simpleContent>
+            <xs:extension base="shortStringType">
+                <xs:attribute name="inventionDate" type="xs:gYear" />
+                <xs:attribute name="production" type="YesNoType" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="adressType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="source" type="xs:anyURI" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="personType">
+        <xs:sequence>
+            <xs:element name="name" type="shortStringType"/>
+            <xs:element name="surname" type="shortStringType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="image" type="adressType"/>
+    <xs:element name="link" type="adressType"/>
+    <xs:attribute name="alive" type="YesNoType"/>
+
+    <xs:simpleType name="listType">
+       <xs:list itemType="xs:integer"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="ageType">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="0"/>
+            <xs:maxInclusive value="99"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="YesNoType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="3"/>
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="shortStringType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="longStringType">
+            <xs:restriction base="xs:string">
+                <xs:minLength value="1"/>
+                <xs:maxLength value="70"/>
+            </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="placeType">
+        <xs:restriction base="xs:integer">
+                <xs:pattern value="[1-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="placeStringType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="15"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:group name="lifespanGroup">
+        <xs:sequence>
+            <xs:element name="birth" type="xs:gYear" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="death" type="xs:gYear" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+
+</xs:schema>
